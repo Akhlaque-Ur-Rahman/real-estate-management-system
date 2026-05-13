@@ -178,7 +178,7 @@ def login():
         db_conn = get_db_connection()
         cursor = db_conn.cursor(dictionary=True)
 
-        query = "SELECT * FROM users WHERE email = %s AND password = %s"
+        query = "SELECT * FROM adminn WHERE email = %s AND password = %s"
         cursor.execute(query, (email, password))
         user = cursor.fetchone()
 
@@ -231,7 +231,7 @@ def signup():
         cursor = conn.cursor()
 
         query = """
-        INSERT INTO users(name, email, password)
+        INSERT INTO adminn(username, email, password)
         VALUES(%s, %s, %s)
         """
 
@@ -260,13 +260,14 @@ def admin_dashboard():
         try:
 
             conn = get_db_connection()
-            cursor = conn.cursor()
+            cursor = conn.cursor(dictionary=True)
 
             # FETCH ALL PROPERTIES
-            cursor.execute("SELECT * FROM properties")
+            cursor.execute("SELECT * FROM properties1")
 
             rows = cursor.fetchall()
 
+            cursor.close()
             conn.close()
 
             return render_template(
@@ -295,13 +296,14 @@ def user_dashboard():
         try:
 
             conn = get_db_connection()
-            cursor = conn.cursor()
+            cursor = conn.cursor(dictionary=True)
 
             # FETCH ALL PROPERTIES
-            cursor.execute("SELECT * FROM properties")
+            cursor.execute("SELECT * FROM properties1")
 
             rows = cursor.fetchall()
 
+            cursor.close()
             conn.close()
 
             return render_template(
@@ -445,7 +447,7 @@ def property_details(id):
     cursor = conn.cursor(dictionary=True)
 
     cursor.execute(
-        "SELECT * FROM properties WHERE id=%s",
+        "SELECT * FROM properties1 WHERE id=%s",
         (id,)
     )
 

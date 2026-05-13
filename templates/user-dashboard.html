@@ -148,23 +148,23 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
                 <div class="property-cards">
 
-                    <img src="{{ property[5] }}">
+                    <img src="{{ url_for('static', filename='IMAGE/' + property.image) }}" alt="{{ property.property_name }}">
 
                     <div class="property-contents">
 
-                        <h3>{{ property[1] }}</h3>
+                        <h3>{{ property.property_name }}</h3>
 
                         <p>
-                            📍 {{ property[2] }}
+                            📍 {{ property.location }}
                         </p>
 
                         <h4>
-                            ₹ {{ property[3] }}
+                            &#8377; {{ property.price }}
                         </h4>
 
                         <div class="buttonss">
 
-                            <a href="/property/{{ property[0] }}"
+                            <a href="/property/{{ property.id }}"
                             class="details-btn">
 
                                 View Details

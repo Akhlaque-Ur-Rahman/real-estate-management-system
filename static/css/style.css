@@ -871,7 +871,7 @@ p {
     display: none;
 }
 
-.featured_tab .active {
+.featured_tab.active {
     display: block;
 }
 
