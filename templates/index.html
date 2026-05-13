@@ -164,63 +164,119 @@ rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.
 
                 <div class="featured_properties_content_container">
 
-                    {% for property in properties %}
-
+                    <!-- CARD 1 -->
                     <div class="product_card">
-
                         <div class="img_container">
-
-                            <img
-                                src="{{ url_for('static', filename='images/' + property.image) }}"
-                                alt="{{ property.property_name }}"
-                                class="product_img"
-                            >
-
+                            <img src="/static/IMAGE/3d-rendering-house-model.jpg" alt="Luxury Villa in Bandra" class="product_img">
                         </div>
-
                         <div class="text_container">
-
-                            <a href="#">
-                                <h3>{{ property.property_name }}</h3>
-                            </a>
-
+                            <a href="/property/1"><h3>Luxury Villa in Bandra</h3></a>
                             <ul class="Product_featured_list">
-
-                                <li>
-                                    <i class="fa-solid fa-bed"></i>
-                                    Beds: {{ property.beds }}
-                                </li>
-
-                                <li>
-                                    <i class="fa-solid fa-bath"></i>
-                                    Baths: {{ property.bathrooms }}
-                                </li>
-
-                                <li>
-                                    <i class="fa-solid fa-expand"></i>
-                                    Sqft: {{ property.sqft }}
-                                </li>
-
+                                <li><i class="fa-solid fa-bed"></i> Beds: 4</li>
+                                <li><i class="fa-solid fa-bath"></i> Baths: 3</li>
+                                <li><i class="fa-solid fa-expand"></i> Sqft: 2800</li>
                             </ul>
-
                             <div class="price_container">
-
-                                <h5>{{ property.price }}</h5>
-
+                                <h5>&#8377; 2,50,00,000</h5>
                             </div>
-
-                            <a
-                                href="/property/{{ property.id }}"
-                                class="view-btn"
-                            >
-                                View Details
-                            </a>
-
+                            <a href="/property/1" class="view-btn">View Details</a>
                         </div>
-
                     </div>
 
-                    {% endfor %}
+                    <!-- CARD 2 -->
+                    <div class="product_card">
+                        <div class="img_container">
+                            <img src="/static/IMAGE/house-loan-estate-sell-mortgage-concept.jpg" alt="Modern Apartment in Patna" class="product_img">
+                        </div>
+                        <div class="text_container">
+                            <a href="/property/2"><h3>Modern Apartment in Patna</h3></a>
+                            <ul class="Product_featured_list">
+                                <li><i class="fa-solid fa-bed"></i> Beds: 3</li>
+                                <li><i class="fa-solid fa-bath"></i> Baths: 2</li>
+                                <li><i class="fa-solid fa-expand"></i> Sqft: 1450</li>
+                            </ul>
+                            <div class="price_container">
+                                <h5>&#8377; 85,00,000</h5>
+                            </div>
+                            <a href="/property/2" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="product_card">
+                        <div class="img_container">
+                            <img src="/static/IMAGE/analog-landscape-city-with-buildings.jpg" alt="Premium Office Space" class="product_img">
+                        </div>
+                        <div class="text_container">
+                            <a href="/property/3"><h3>Premium Office Space</h3></a>
+                            <ul class="Product_featured_list">
+                                <li><i class="fa-solid fa-building"></i> Type: Office</li>
+                                <li><i class="fa-solid fa-bath"></i> Baths: 2</li>
+                                <li><i class="fa-solid fa-expand"></i> Sqft: 1800</li>
+                            </ul>
+                            <div class="price_container">
+                                <h5>&#8377; 1,20,00,000</h5>
+                            </div>
+                            <a href="/property/3" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div class="product_card">
+                        <div class="img_container">
+                            <img src="/static/IMAGE/mumbai-city-skyline-aerial-panorama.jpg" alt="Sea View Penthouse" class="product_img">
+                        </div>
+                        <div class="text_container">
+                            <a href="/property/4"><h3>Sea View Penthouse</h3></a>
+                            <ul class="Product_featured_list">
+                                <li><i class="fa-solid fa-bed"></i> Beds: 5</li>
+                                <li><i class="fa-solid fa-bath"></i> Baths: 4</li>
+                                <li><i class="fa-solid fa-expand"></i> Sqft: 4200</li>
+                            </ul>
+                            <div class="price_container">
+                                <h5>&#8377; 5,75,00,000</h5>
+                            </div>
+                            <a href="/property/4" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- CARD 5 -->
+                    <div class="product_card">
+                        <div class="img_container">
+                            <img src="/static/IMAGE/heroimg.jpg" alt="Cozy 2BHK House" class="product_img">
+                        </div>
+                        <div class="text_container">
+                            <a href="/property/5"><h3>Cozy 2BHK House</h3></a>
+                            <ul class="Product_featured_list">
+                                <li><i class="fa-solid fa-bed"></i> Beds: 2</li>
+                                <li><i class="fa-solid fa-bath"></i> Baths: 2</li>
+                                <li><i class="fa-solid fa-expand"></i> Sqft: 950</li>
+                            </ul>
+                            <div class="price_container">
+                                <h5>&#8377; 45,00,000</h5>
+                            </div>
+                            <a href="/property/5" class="view-btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- CARD 6 -->
+                    <div class="product_card">
+                        <div class="img_container">
+                            <img src="/static/IMAGE/urban-traffic-with-cityscape.jpg" alt="Smart Studio Apartment" class="product_img">
+                        </div>
+                        <div class="text_container">
+                            <a href="/property/6"><h3>Smart Studio Apartment</h3></a>
+                            <ul class="Product_featured_list">
+                                <li><i class="fa-solid fa-bed"></i> Beds: 1</li>
+                                <li><i class="fa-solid fa-bath"></i> Baths: 1</li>
+                                <li><i class="fa-solid fa-expand"></i> Sqft: 600</li>
+                            </ul>
+                            <div class="price_container">
+                                <h5>&#8377; 32,00,000</h5>
+                            </div>
+                            <a href="/property/6" class="view-btn">View Details</a>
+                        </div>
+                    </div>
 
                 </div>
 

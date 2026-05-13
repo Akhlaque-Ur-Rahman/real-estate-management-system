@@ -6,95 +6,9 @@ app = Flask(__name__)
 app.secret_key = "mysecretkey"
 
 
-# SAMPLE PROPERTIES — used as fallback when DB is unavailable or returns no rows
-SAMPLE_PROPERTIES = [
-    {
-        "id": 1,
-        "property_name": "Luxury Villa in Bandra",
-        "price": "2,50,00,000",
-        "location": "Bandra West, Mumbai",
-        "beds": 4,
-        "bathrooms": 3,
-        "sqft": 2800,
-        "image": "3d-rendering-house-model.jpg",
-        "description": "A premium 4BHK villa with garden and modern interiors.",
-    },
-    {
-        "id": 2,
-        "property_name": "Modern Apartment in Patna",
-        "price": "85,00,000",
-        "location": "Boring Road, Patna",
-        "beds": 3,
-        "bathrooms": 2,
-        "sqft": 1450,
-        "image": "house-loan-estate-sell-mortgage-concept.jpg",
-        "description": "Spacious 3BHK apartment with balcony and lift access.",
-    },
-    {
-        "id": 3,
-        "property_name": "Premium Office Space",
-        "price": "1,20,00,000",
-        "location": "BKC, Mumbai",
-        "beds": 0,
-        "bathrooms": 2,
-        "sqft": 1800,
-        "image": "analog-landscape-city-with-buildings.jpg",
-        "description": "Furnished commercial office in prime business district.",
-    },
-    {
-        "id": 4,
-        "property_name": "Sea View Penthouse",
-        "price": "5,75,00,000",
-        "location": "Marine Drive, Mumbai",
-        "beds": 5,
-        "bathrooms": 4,
-        "sqft": 4200,
-        "image": "mumbai-city-skyline-aerial-panorama.jpg",
-        "description": "Top-floor penthouse with panoramic sea-facing views.",
-    },
-    {
-        "id": 5,
-        "property_name": "Cozy 2BHK House",
-        "price": "45,00,000",
-        "location": "Kankarbagh, Patna",
-        "beds": 2,
-        "bathrooms": 2,
-        "sqft": 950,
-        "image": "heroimg.jpg",
-        "description": "Affordable family home in a peaceful residential area.",
-    },
-    {
-        "id": 6,
-        "property_name": "Smart Studio Apartment",
-        "price": "32,00,000",
-        "location": "Andheri East, Mumbai",
-        "beds": 1,
-        "bathrooms": 1,
-        "sqft": 600,
-        "image": "urban-traffic-with-cityscape.jpg",
-        "description": "Compact studio perfect for working professionals.",
-    },
-]
-
-
 @app.route("/")
 def home():
-    properties = []
-    try:
-        conn = get_db_connection()
-        cursor = conn.cursor(dictionary=True)
-        cursor.execute("SELECT * FROM properties")
-        properties = cursor.fetchall()
-        cursor.close()
-        conn.close()
-    except Exception as e:
-        print(f"[home] DB unavailable: {e}")
-
-    # Fallback to hardcoded list so the page never shows an empty section.
-    if not properties:
-        properties = SAMPLE_PROPERTIES
-
-    return render_template("index.html", properties=properties)
+    return render_template("index.html")
 
 
 # =========================
