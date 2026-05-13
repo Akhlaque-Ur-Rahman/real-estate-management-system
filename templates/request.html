@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css" integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Real Estate Management Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,
+400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,
+400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link
+rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+</head>
+<body>
+    < class="quote-body">
+    <div class="glass-wrapper">
+        <div class="home-nav">
+            <a href="/"><i class="fa-solid fa-house"></i> HOME</a>
+        </div>
+
+        <div class="glass-container">
+            <div class="glass-form">
+                <h2>Request a Quote</h2>
+                <p>Tell us your requirements and we'll get back to you.</p>
+                
+                <form id="quoteForm">
+                    <div class="input-group">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="userName" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="userEmail" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-building"></i>
+                        <select id="propertyType" required>
+                            <option value="" disabled selected>Property Type</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="villa">Villa/House</option>
+                            <option value="commercial">Commercial</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-message"></i>
+                        <textarea id="message" placeholder="Describe your requirements..." rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="quote-btn">Send Request &rarr;</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" 
+            integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/fontawesome.min.js" 
+                integrity="sha512-obFNtQ1JKCrxPBPLmYDUevlriATl5EhvwU3CFtdW/HKOkeAe0bbsyZfHO44/f1QyndrZJ464TQvrRP9ZjyXSSA==" 
+                crossorigin="anonymous" referrerpolicy="no-referrer">
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js">
+
+            </script>
+            <script src="{{ url_for('static',filename='js/script.js') }}">
+
+            </script>
+    </body>
+</html>

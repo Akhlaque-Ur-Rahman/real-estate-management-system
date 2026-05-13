@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Real Estate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <section class="services_section">
+        <div class="services_container">
+            <div class="title_container">
+                <h5 class="subtitle">Our Services</h5>
+                <h2 class="title">What We Offer</h2>
+                <p>From buying and selling to renting and management, we have you covered.</p>
+            </div>
+
+            <div style="text-align:center; margin-top:30px;">
+                <a href="{{ url_for('home') }}#services_section" class="search_form_btn">
+                    View on Home Page
+                </a>
+                <br><br>
+                <a href="{{ url_for('home') }}" class="back-link">&larr; Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

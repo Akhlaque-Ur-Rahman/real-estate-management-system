@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css" integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Real Estate Management Project</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,
+400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,
+400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link
+rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+</head>
+<body clas="by">
+
+     <header class="about-hero">
+        <div class="overlay">
+            <h1>Elevating the Standard of <br><span>Contemporary Living</span></h1>
+            <p>Atlas Properties is committed to creating exceptional residential communities.</p>
+        </div>
+    </header>
+
+    <section class="about-details">
+        <div class="container">
+            <div class="grid">
+                <div class="text-content">
+                    <h4 class="gold-text">ABOUT BEAUTIFUL PROPERTIES</h4>
+                    <h2>Find Your Dream Home with <br> Properties</h2>
+                    <p>We blend prime locations, high-quality materials, and innovative designs to elevate the standard of modern living. Our mission is to provide more than just a home; we provide a community.</p>
+                    
+                    <div class="features">
+                        <div class="feature-item">
+                            <span class="icon">📍</span>
+                            <div>
+                                <strong>Prime Locations</strong>
+                                <p>Luxury spots in the heart of the city.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="icon">💎</span>
+                            <div>
+                                <strong>High-End Quality</strong>
+                                <p>Built with premium materials and finish.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{{url_for('story_page')}}"><button class="btn-primary">Learn More About Us</button></a>
+                </div>
+
+                <div class="image-gallery">
+                    <div class="main-img">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800" alt="Building">
+                    </div>
+                    <div class="sub-images">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=400" alt="House">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=400" alt="Interior">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" 
+integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ==" 
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/fontawesome.min.js" 
+integrity="sha512-obFNtQ1JKCrxPBPLmYDUevlriATl5EhvwU3CFtdW/HKOkeAe0bbsyZfHO44/f1QyndrZJ464TQvrRP9ZjyXSSA==" 
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

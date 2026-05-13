@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="M">
+    <!-- <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <hr>
+        <p>Welcome, Admin</p>
+        <br>
+        <a href="/logout" class="btn-logout">Logout</a>
+    </div>
+
+    <div class="main-content">
+        <h1>Property Management</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Property Title</th>
+                    <th>Location</th>
+                    <th>Price (INR)</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for property in all_properties %}
+                <tr>
+                    <td>{{ property[0] }}</td>
+                    <td>{{ property[1] }}</td>
+                    <td>{{ property[2] }}</td>
+                    <td>₹{{ "{:,.2f}".format(property[3]) }}</td>
+                    <td>
+                        <button class="btn-edit">Edit</button>
+                        <button class="btn-delete">Delete</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div> -->
+    <div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <h2>Admin Panel</h2>
+
+        <ul>
+
+            <li>
+                <a href="#">
+                    <i class="fa fa-home"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa fa-building"></i>
+                    Properties
+                </a>
+            </li>
+
+            <li>
+                <a href="/add-property">
+                    <i class="fa fa-plus"></i>
+                    Add Property
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa fa-users"></i>
+                    Agents
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa fa-user"></i>
+                    Users
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa fa-envelope"></i>
+                    Messages
+                </a>
+            </li>
+
+            <li>
+                <a href="/logout">
+                    <i class="fa fa-sign-out"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- MAIN -->
+
+    <div class="main-content">
+
+        <!-- TOP BAR -->
+
+        <div class="topbar">
+
+            <div class="search-box">
+
+                <input type="text"
+                placeholder="Search here...">
+
+                <i class="fa fa-search"></i>
+
+            </div>
+
+            <div class="top-right">
+
+                <i class="fa fa-bell notification"></i>
+
+                <div class="admin-profile">
+
+                    <img src="https://i.pravatar.cc/150?img=12">
+
+                    <span>Admin</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARDS -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h2>120</h2>
+
+                <p>Total Properties</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>85</h2>
+
+                <p>Total Users</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>25</h2>
+
+                <p>Total Agents</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>15</h2>
+
+                <p>Pending Requests</p>
+
+            </div>
+
+        </div>
+
+        <!-- TABLE -->
+
+        <div class="table-section">
+
+            <h2>Recent Properties</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Image</th>
+                        <th>Property</th>
+                        <th>Location</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for property in properties %}
+
+                    <tr>
+
+                        <td>
+                            <img src="{{ property[5] }}">
+                        </td>
+
+                        <td>{{ property[1] }}</td>
+
+                        <td>{{ property[3] }}</td>
+
+                        <td>₹ {{ property[2] }}</td>
+
+                        <td>
+
+                            <span class="status available">
+                                Available
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button class="edit-btn">
+                                Edit
+                            </button>
+
+                            <button class="delete-btn">
+                                Delete
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Real Estate Management Project</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- SWIPER CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body class="bdy">
+
+    <!-- LoginSECTION START -->
+
+    <div class="glass-wrapper">
+
+        <div class="glass-container">
+
+            <!-- LEFT SIDE -->
+            <div class="glass-side-info">
+
+                <h2>Welcome Back!</h2>
+
+                <p>
+                    It's time to boost your property search experience.
+                </p>
+
+                <div class="footer-link">
+
+                    <span>Don't have an account?</span>
+
+                    <a href="/signup" class="toggle-btn">
+                        Register here
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="glass-form">
+
+                <!-- FORM -->
+                <form id="loginForm"
+                    action="/login"
+                    method="POST"
+                    autocomplete="off">
+
+                    <h2>Login</h2>
+
+                    <!-- EMAIL -->
+                    <div class="input-group">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <input type="email"
+                            name="email"
+                            placeholder="Email Address"
+                            required>
+
+                    </div>
+
+                    <!-- PASSWORD -->
+                    <div class="input-group">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input type="password"
+                            id="loginPass"
+                            name="password"
+                            placeholder="Password"
+                            required
+                            autocomplete="new-password">
+
+                        <i class="fa-solid fa-eye-slash toggle-pass"
+                            onclick="togglePassword('loginPass')"></i>
+
+                    </div>
+
+                    <!-- FORGOT PASSWORD -->
+                    <a href="/forgot-password" class="forgot-link">
+                        Forgot Password?
+                    </a>
+
+                    <!-- LoginBUTTON -->
+                    <button type="submit" class="submit-btn">
+                        Login→
+                    </button>
+
+                    <!-- CANCEL BUTTON -->
+                    <a href="/" class="cancel-btnn">
+                        Cancel
+                    </a>
+
+                    <!-- DIVIDER -->
+                    <div class="divider">
+                        <span>or continue with</span>
+                    </div>
+
+                    <!-- SOCIAL ICONS -->
+                    <div class="social-icons">
+
+                        <i class="fa-brands fa-google"></i>
+
+                        <i class="fa-brands fa-facebook"></i>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- LoginSECTION END -->
+
+
+    <!-- FONT AWESOME JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"></script>
+
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

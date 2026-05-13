@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css" integrity="sha512-M5Kq4YVQrjg5c2wsZSn27Dkfm/2ALfxmun0vUE3mPiJyK53hQBHYCVAtvMYEC7ZXmYLg8DVG4tF8gD27WmDbsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Real Estate Management Project</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,
+400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,
+400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link
+rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+</head>
+<body class="buddy">
+    <div class="contact-page">
+        <div class="glass-container">
+            <div class="contact-info">
+                <h1>Get in <span>Touch</span></h1>
+                <div class="info-items">
+                    <div class="item">📍 Patna, Bihar, India</div>
+                    <div class="item">📧 support@realestate.com</div>
+                    <div class="item">📞 +91 9876543210</div>
+                </div>
+                
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115132.
+    86107244104!2d85.073002!3d25.608175!2m3!1f0!2f0!3f0!3m2!1i1024!2i
+    768!4f13.1!3m3!1m2!1s0x39ed5842d03d77ef%3A0x5716c8d1c106788!2sPatna
+    %2C%20Bihar!5e0!3m2!1sen!2sin!4v1714732156432!5m2!1sen!2sin"></iframe>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form action="/contact" method="POST">
+                    <div class="input-box">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-box">
+                        <textarea name="message" placeholder="How can we help you?" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="send-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

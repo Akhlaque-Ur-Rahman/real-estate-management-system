@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>User Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='css/user_dashboard.css') }}">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboards">
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebars">
+
+        <h2>User Panel</h2>
+
+        <ul>
+
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i>
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="/properties">
+                    <i class="fa fa-building"></i>
+                    Properties
+                </a>
+            </li>
+
+            <li>
+                <a href="/saved-properties">
+                    <i class="fa fa-heart"></i>
+                    Saved Properties
+                </a>
+            </li>
+
+            <li>
+                <a href="/requests">
+                    <i class="fa fa-envelope"></i>
+                    My Requests
+                </a>
+            </li>
+
+            <li>
+                <a href="/profiles">
+                    <i class="fa fa-user"></i>
+                    Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="/logout">
+                    <i class="fa fa-sign-out"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+
+    <div class="main-contents">
+
+        <!-- TOPBAR -->
+
+        <div class="topbars">
+
+            <div class="search-boxes">
+
+                <input type="text"
+                id="searchInput"
+                placeholder="Search properties...">
+
+                <i class="fa fa-search"></i>
+
+            </div>
+
+            <div class="profiles">
+
+                <img src="https://i.pravatar.cc/150?img=12">
+
+                <span>
+                    Welcome User
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- DASHBOARD CARDS -->
+
+        <div class="cardss">
+
+            <div class="cardi">
+
+                <h2>20</h2>
+
+                <p>Available Properties</p>
+
+            </div>
+
+            <div class="cardi">
+
+                <h2>5</h2>
+
+                <p>Saved Properties</p>
+
+            </div>
+
+            <div class="cardi">
+
+                <h2>3</h2>
+
+                <p>My Requests</p>
+
+            </div>
+
+        </div>
+
+        <!-- PROPERTY SECTION -->
+
+        <div class="property-sections">
+
+            <h2>Recent Properties</h2>
+
+            <div class="property-containers">
+
+                {% for property in properties %}
+
+                <div class="property-cards">
+
+                    <img src="{{ property[5] }}">
+
+                    <div class="property-contents">
+
+                        <h3>{{ property[1] }}</h3>
+
+                        <p>
+                            📍 {{ property[2] }}
+                        </p>
+
+                        <h4>
+                            ₹ {{ property[3] }}
+                        </h4>
+
+                        <div class="buttonss">
+
+                            <a href="/property/{{ property[0] }}"
+                            class="details-btn">
+
+                                View Details
+
+                            </a>
+
+                            <button class="save-btn">
+
+                                Save
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static',
+filename='js/user_dashboard.js') }}"></script>
+
+</body>
